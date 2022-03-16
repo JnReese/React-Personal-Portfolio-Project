@@ -28,14 +28,14 @@ const About = () => {
 
             <article className="about__card">
               <FiUsers className="about__icon" />
-              <h5>Clients</h5>
-              <small>200+ Worldwide</small>
+              <h5>Languages / FrameWorks</h5>
+              <small>Js, Html, Css, React</small>
             </article>
 
             <article className="about__card">
               <AiOutlineFolderAdd className="about__icon" />
-              <h5>Projects</h5>
-              <small>80+ Completed Projects</small>
+              <h5>CourseWork</h5>
+              <small>Altcademy</small>
             </article>
           </div>
 
