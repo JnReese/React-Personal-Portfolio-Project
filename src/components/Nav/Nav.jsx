@@ -8,10 +8,22 @@ import {AiOutlineContacts} from "react-icons/ai"
 import { useState } from 'react'
 
 
+
 const Nav = () => {
   const [activeNav, setActiveNav] = useState("#")
+  const [navscroll, setNavScroll] = useState("")
+  window.onscroll = function(ev) {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+      setNavScroll("#")
+    }
+    else if ((window.innerHeight + window.scrollY) <= document.body.offsetHeight) {
+      setNavScroll("")
+    }
+};
+  
+
   return (
-    <nav>
+    <nav className={navscroll === "#" ? "bottom" : "" } >
       <a href="#" onClick={() => setActiveNav('#')}  className={activeNav === "#" ? 'active' : ""}><AiTwotoneHome/></a>
       <a href="#About" onClick={() => setActiveNav('#About')} className={activeNav === "#About" ? 'active' : ""}><FiUser/></a>
       <a href="#Experience"  onClick={() => setActiveNav('#Experience')} className={activeNav === "#Experience" ? 'active' : ""}><BiBookAlt/></a>
